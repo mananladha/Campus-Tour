@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Bhopal - 360° Campus Virtual Tour</title>
+    <meta name="description" content="Explore VIT Bhopal's magnificent 250-acre campus through an immersive 360° virtual tour. Discover world-class facilities, modern architecture, and vibrant campus life.">
+    <meta name="author" content="VIT Bhopal">
+    
+    <meta property="og:title" content="VIT Bhopal - 360° Campus Virtual Tour">
+    <meta property="og:description" content="Explore VIT Bhopal's magnificent 250-acre campus through an immersive 360° virtual tour. Discover world-class facilities, modern architecture, and vibrant campus life.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Campus Tour...</div>
+    </div>
+
+    <!-- Particle Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://vitbhopal.ac.in/wp-content/uploads/2020/01/logochhota.png" alt="VIT Bhopal" width="148.05" height="60">
+                <span class="nav-title">VIT Bhopal</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#tour" class="nav-link">Virtual Tour</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Welcome to</span>
+                    <span class="title-line gradient-text">VIT Bhopal</span>
+                    <span class="title-line">360° Campus Tour</span>
+                </h1>
+                <p class="hero-subtitle">Explore our magnificent 250-acre campus through an immersive virtual experience</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="startTourBtn" onclick="startVirtualTour()">
+                        <span class="btn-icon">🎯</span>
+                        Start Virtual Tour
+                    </button>
+                    <button class="btn-secondary" id="learnMoreBtn">
+                        <span class="btn-icon">📚</span>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-label">Acres Campus</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="2017">0</div>
+                    <div class="stat-label">Established</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="29">0</div>
+                    <div class="stat-label">Courses</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">LPA Package</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="gradient-text">VIT Bhopal<span class="skillsdot">.</span></span></h2>
+                <p class="section-subtitle">Pioneering Excellence in Education Since 2017</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Established in 2017, VIT Bhopal is spread over a huge campus of 250 acres located at Indore Highway, Bhopal. 
+                        The campus has a unique integrated 'Lecture and Laboratory' learning platform which is the blackboard-less classroom.
+                    </p>
+                    <p class="about-paragraph">
+                        The university uses <strong>Collaborative and Active Learning Through Technology (CALTECH)</strong> and a 
+                        <strong>Fully Flexible Credit System (FFCS)</strong> to facilitate the learning of students.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3 class="feature-title">World-Class Education</h3>
+                        <p class="feature-description">Cutting-edge curriculum with industry integration</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3 class="feature-title">Innovation Hub</h3>
+                        <p class="feature-description">State-of-the-art labs and research facilities</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3 class="feature-title">Global Connections</h3>
+                        <p class="feature-description">International partnerships and opportunities</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Career Excellence</h3>
+                        <p class="feature-description">100% placement assistance with top companies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="tour-section" id="tour">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore Our <span class="gradient-text">Campus<span class="skillsdot">.</span></span></h2>
+                <p class="section-subtitle">Take a virtual journey through our world-class facilities</p>
+            </div>
+            <div class="tour-grid">
+                <div class="tour-card" data-location="library">
+                    <div class="tour-card-image">
+                        <div class="tour-card-overlay">
+                            <button class="tour-btn">🏛️ Library</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-location="labs">
+                    <div class="tour-card-image">
+                        <div class="tour-card-overlay">
+                            <button class="tour-btn">🔬 Labs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-location="campus">
+                    <div class="tour-card-image">
+                        <div class="tour-card-overlay">
+                            <button class="tour-btn">🏫 Campus</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card" data-location="sports">
+                    <div class="tour-card-image">
+                        <div class="tour-card-overlay">
+                            <button class="tour-btn">⚽ Sports</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="gradient-text">Touch<span class="skillsdot">.</span></span></h2>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <a href="https://www.google.com/maps/place/VIT+Bhopal+University/@23.0752256,76.8606208,14z/data=!4m6!3m5!1s0x397ce9ceaaaaaaab:0xa224b6b82b421f83!8m2!3d23.0774796!4d76.8513183!16s%2Fg%2F11hbgkdndx?entry=ttu&g_ep=EgoyMDI1MDkyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="contact-link"><p>VIT Bhopal University<br>Bhopal-Indore Highway, Kothrikalan<br>Sehore, Madhya Pradesh – 466114</p></a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+91-755-715-8000" class="contact-link">+91-755-715-8000</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@vitbhopal.ac.in">info@vitbhopal.ac.in</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" id="submitBtn">
+                        <span class="btn-icon">📤</span>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="https://vitbhopal.ac.in/wp-content/uploads/2020/01/logochhota.png" alt="VIT Bhopal" width="60">
+                        <span>VIT Bhopal University</span>
+                    </div>
+                    <p class="footer-description">
+                        Pioneering excellence in education and research, creating tomorrow's leaders today.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://vitbhopal.ac.in" target="_blank">Main Website</a></li>
+                        <li><a href="https://admission.vitbhopal.ac.in/" target="_blank">Admissions</a></li>
+                        <li><a href="https://vitbhopal.ac.in/gallery/" target="_blank">Gallery</a></li>
+                        <li><a href="#about">Campus Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Academics</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">Programs</a></li>
+                        <li><a href="#about">Research</a></li>
+                        <li><a href="#about">Faculty</a></li>
+                        <li><a href="#about">Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Socials</h3>
+                    <div class="footer-social">
+                        <a href="https://x.com/vitbhopal?lang=en" target="_blank"><i class="fab fa-x"></i></a>
+                        <a href="https://www.instagram.com/vit.bhopal/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/school/vit-bhopal-university/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/VITUnivBhopal/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/c/VITBHOPALOfficial" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Group-1. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
